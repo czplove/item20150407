@@ -1,0 +1,608 @@
+Expression	Value	Location	Type	
+ADXL_DUR	0x70	0x200018B9	unsigned char	
+ADXL_THRESH_TAP	0x20	0x200018B8	unsigned char	
+voice_flag	'U' (0x55)	0x200018C5	unsigned char	
+rx2_cnt	0x00	0x2000188B	unsigned char	
+uart2_rx_buff	""	0x20001348	unsigned char[100]	
+ADI_channels_init_flag	'\0' (0x00)	0x2000188F	unsigned char	
+Time_2048ms_Counter	20	0x2000182C	unsigned short	
+ADI_channels_wait_time	0	0x20001842	unsigned short	
+led_display_start	0x55	0x200018A1	unsigned char	
+cticks_s_page	39	0x200018A3	unsigned char	
+temp_pt	61	0x20001824	unsigned short	
+ADI_X1	1528	0x200017E4	unsigned long	
+ADI_X2	1629	0x200017E8	unsigned long	
+ADI_Y1	1543	0x200017EC	unsigned long	
+ADI_Y2	1627	0x200017F0	unsigned long	
+watch_data	<array>	0x20000A70	unsigned short[512]	
+[0]	1208	0x20000A70	unsigned short	
+[1]	1222	0x20000A72	unsigned short	
+[2]	1237	0x20000A74	unsigned short	
+[3]	1211	0x20000A76	unsigned short	
+[4]	1309	0x20000A78	unsigned short	
+[5]	1307	0x20000A7A	unsigned short	
+[6]	1304	0x20000A7C	unsigned short	
+[7]	1322	0x20000A7E	unsigned short	
+[8]	1213	0x20000A80	unsigned short	
+[9]	1211	0x20000A82	unsigned short	
+[10]	1223	0x20000A84	unsigned short	
+[11]	1226	0x20000A86	unsigned short	
+[12]	1259	0x20000A88	unsigned short	
+[13]	1260	0x20000A8A	unsigned short	
+[14]	1241	0x20000A8C	unsigned short	
+[15]	1256	0x20000A8E	unsigned short	
+[16]	1232	0x20000A90	unsigned short	
+[17]	1237	0x20000A92	unsigned short	
+[18]	1236	0x20000A94	unsigned short	
+[19]	1238	0x20000A96	unsigned short	
+[20]	1294	0x20000A98	unsigned short	
+[21]	1289	0x20000A9A	unsigned short	
+[22]	1282	0x20000A9C	unsigned short	
+[23]	1278	0x20000A9E	unsigned short	
+[24]	1283	0x20000AA0	unsigned short	
+[25]	1270	0x20000AA2	unsigned short	
+[26]	1281	0x20000AA4	unsigned short	
+[27]	1267	0x20000AA6	unsigned short	
+
+[28]	1292	0x20000AA8	unsigned short	
+[29]	1296	0x20000AAA	unsigned short	
+[30]	1308	0x20000AAC	unsigned short	
+[31]	1297	0x20000AAE	unsigned short	
+
+[32]	1274	0x20000AB0	unsigned short	
+[33]	1264	0x20000AB2	unsigned short	
+[34]	1274	0x20000AB4	unsigned short	
+[35]	1274	0x20000AB6	unsigned short	
+
+[36]	1358	0x20000AB8	unsigned short	
+[37]	1357	0x20000ABA	unsigned short	
+[38]	1347	0x20000ABC	unsigned short	
+[39]	1357	0x20000ABE	unsigned short	
+
+[40]	1233	0x20000AC0	unsigned short	
+[41]	1219	0x20000AC2	unsigned short	
+[42]	1227	0x20000AC4	unsigned short	
+[43]	1230	0x20000AC6	unsigned short	
+
+[44]	1311	0x20000AC8	unsigned short	
+[45]	1326	0x20000ACA	unsigned short	
+[46]	1308	0x20000ACC	unsigned short	
+[47]	1318	0x20000ACE	unsigned short	
+
+[48]	1245	0x20000AD0	unsigned short	
+[49]	1242	0x20000AD2	unsigned short	
+[50]	1245	0x20000AD4	unsigned short	
+[51]	1230	0x20000AD6	unsigned short	
+
+[52]	1284	0x20000AD8	unsigned short	
+[53]	1296	0x20000ADA	unsigned short	
+[54]	1286	0x20000ADC	unsigned short	
+[55]	1293	0x20000ADE	unsigned short	
+
+[56]	1293	0x20000AE0	unsigned short	
+[57]	1313	0x20000AE2	unsigned short	
+[58]	1298	0x20000AE4	unsigned short	
+[59]	1281	0x20000AE6	unsigned short	
+
+[60]	1265	0x20000AE8	unsigned short	
+[61]	1266	0x20000AEA	unsigned short	
+[62]	1243	0x20000AEC	unsigned short	
+[63]	1262	0x20000AEE	unsigned short	
+
+[64]	1332	0x20000AF0	unsigned short	
+[65]	1329	0x20000AF2	unsigned short	
+[66]	1316	0x20000AF4	unsigned short	
+[67]	1322	0x20000AF6	unsigned short	
+
+[68]	1248	0x20000AF8	unsigned short	
+[69]	1253	0x20000AFA	unsigned short	
+[70]	1249	0x20000AFC	unsigned short	
+[71]	1252	0x20000AFE	unsigned short	
+
+[72]	1237	0x20000B00	unsigned short	
+[73]	1248	0x20000B02	unsigned short	
+[74]	1242	0x20000B04	unsigned short	
+[75]	1238	0x20000B06	unsigned short	
+
+[76]	1299	0x20000B08	unsigned short	
+[77]	1293	0x20000B0A	unsigned short	
+[78]	1301	0x20000B0C	unsigned short	
+[79]	1287	0x20000B0E	unsigned short	
+
+[80]	1255	0x20000B10	unsigned short	
+[81]	1253	0x20000B12	unsigned short	
+[82]	1252	0x20000B14	unsigned short	
+[83]	1260	0x20000B16	unsigned short	
+
+[84]	1271	0x20000B18	unsigned short	
+[85]	1277	0x20000B1A	unsigned short	
+[86]	1250	0x20000B1C	unsigned short	
+[87]	1262	0x20000B1E	unsigned short	
+
+[88]	1318	0x20000B20	unsigned short	
+[89]	1311	0x20000B22	unsigned short	
+[90]	1305	0x20000B24	unsigned short	
+[91]	1304	0x20000B26	unsigned short	
+
+[92]	1238	0x20000B28	unsigned short	
+[93]	1245	0x20000B2A	unsigned short	
+[94]	1246	0x20000B2C	unsigned short	
+[95]	1249	0x20000B2E	unsigned short	
+
+[96]	1271	0x20000B30	unsigned short	
+[97]	1272	0x20000B32	unsigned short	
+[98]	1257	0x20000B34	unsigned short	
+[99]	1280	0x20000B36	unsigned short	
+
+[100]	1232	0x20000B38	unsigned short	
+[101]	1217	0x20000B3A	unsigned short	
+[102]	1241	0x20000B3C	unsigned short	
+[103]	1246	0x20000B3E	unsigned short	
+
+[104]	1294	0x20000B40	unsigned short	
+[105]	1289	0x20000B42	unsigned short	
+[106]	1295	0x20000B44	unsigned short	
+[107]	1299	0x20000B46	unsigned short	
+
+[108]	1293	0x20000B48	unsigned short	
+[109]	1296	0x20000B4A	unsigned short	
+[110]	1293	0x20000B4C	unsigned short	
+[111]	1291	0x20000B4E	unsigned short	
+
+[112]	1314	0x20000B50	unsigned short	
+[113]	1313	0x20000B52	unsigned short	
+[114]	1310	0x20000B54	unsigned short	
+[115]	1303	0x20000B56	unsigned short	
+
+[116]	1286	0x20000B58	unsigned short	
+[117]	1291	0x20000B5A	unsigned short	
+[118]	1296	0x20000B5C	unsigned short	
+[119]	1288	0x20000B5E	unsigned short	
+
+[120]	1228	0x20000B60	unsigned short	
+[121]	1237	0x20000B62	unsigned short	
+[122]	1228	0x20000B64	unsigned short	
+[123]	1227	0x20000B66	unsigned short	
+
+[124]	1298	0x20000B68	unsigned short	
+[125]	1298	0x20000B6A	unsigned short	
+[126]	1286	0x20000B6C	unsigned short	
+[127]	1306	0x20000B6E	unsigned short	
+
+[128]	1230	0x20000B70	unsigned short	
+[129]	1222	0x20000B72	unsigned short	
+[130]	1235	0x20000B74	unsigned short	
+[131]	1244	0x20000B76	unsigned short	
+
+[132]	1254	0x20000B78	unsigned short	
+[133]	1259	0x20000B7A	unsigned short	
+[134]	1263	0x20000B7C	unsigned short	
+[135]	1247	0x20000B7E	unsigned short	
+
+[136]	1302	0x20000B80	unsigned short	
+[137]	1309	0x20000B82	unsigned short	
+[138]	1302	0x20000B84	unsigned short	
+[139]	1308	0x20000B86	unsigned short	
+
+[140]	1285	0x20000B88	unsigned short	
+[141]	1308	0x20000B8A	unsigned short	
+[142]	1291	0x20000B8C	unsigned short	
+[143]	1295	0x20000B8E	unsigned short	
+
+[144]	1301	0x20000B90	unsigned short	
+[145]	1298	0x20000B92	unsigned short	
+[146]	1302	0x20000B94	unsigned short	
+[147]	1304	0x20000B96	unsigned short	
+
+[148]	1297	0x20000B98	unsigned short	
+[149]	1293	0x20000B9A	unsigned short	
+[150]	1314	0x20000B9C	unsigned short	
+[151]	1306	0x20000B9E	unsigned short	
+
+[152]	1284	0x20000BA0	unsigned short	
+[153]	1284	0x20000BA2	unsigned short	
+[154]	1308	0x20000BA4	unsigned short	
+[155]	1292	0x20000BA6	unsigned short	
+
+[156]	1303	0x20000BA8	unsigned short	
+[157]	1300	0x20000BAA	unsigned short	
+[158]	1307	0x20000BAC	unsigned short	
+[159]	1291	0x20000BAE	unsigned short	
+
+[160]	1279	0x20000BB0	unsigned short	
+[161]	1294	0x20000BB2	unsigned short	
+[162]	1300	0x20000BB4	unsigned short	
+[163]	1279	0x20000BB6	unsigned short	
+
+[164]	1356	0x20000BB8	unsigned short	
+[165]	1339	0x20000BBA	unsigned short	
+[166]	1350	0x20000BBC	unsigned short	
+[167]	1332	0x20000BBE	unsigned short	
+
+[168]	1357	0x20000BC0	unsigned short	
+[169]	1366	0x20000BC2	unsigned short	
+[170]	1367	0x20000BC4	unsigned short	
+[171]	1365	0x20000BC6	unsigned short	
+
+[172]	1280	0x20000BC8	unsigned short	
+[173]	1294	0x20000BCA	unsigned short	
+[174]	1293	0x20000BCC	unsigned short	
+[175]	1279	0x20000BCE	unsigned short	
+
+[176]	1361	0x20000BD0	unsigned short	
+[177]	1375	0x20000BD2	unsigned short	
+[178]	1373	0x20000BD4	unsigned short	
+[179]	1356	0x20000BD6	unsigned short	
+
+[180]	1348	0x20000BD8	unsigned short	
+[181]	1368	0x20000BDA	unsigned short	
+[182]	1374	0x20000BDC	unsigned short	
+[183]	1330	0x20000BDE	unsigned short	
+
+[184]	1361	0x20000BE0	unsigned short	
+[185]	1399	0x20000BE2	unsigned short	
+[186]	1391	0x20000BE4	unsigned short	
+[187]	1338	0x20000BE6	unsigned short	
+
+[188]	1335	0x20000BE8	unsigned short	
+[189]	1366	0x20000BEA	unsigned short	
+[190]	1417	0x20000BEC	unsigned short	
+[191]	1315	0x20000BEE	unsigned short	
+
+[192]	1468	0x20000BF0	unsigned short	
+[193]	1522	0x20000BF2	unsigned short	
+[194]	1560	0x20000BF4	unsigned short	
+[195]	1439	0x20000BF6	unsigned short	
+
+[196]	1701	0x20000BF8	unsigned short	
+[197]	1737	0x20000BFA	unsigned short	
+[198]	1798	0x20000BFC	unsigned short	
+[199]	1628	0x20000BFE	unsigned short	
+
+[200]	1979	0x20000C00	unsigned short	
+[201]	2043	0x20000C02	unsigned short	
+[202]	2101	0x20000C04	unsigned short	
+[203]	1888	0x20000C06	unsigned short	
+
+[204]	2431	0x20000C08	unsigned short	
+[205]	2510	0x20000C0A	unsigned short	
+[206]	2571	0x20000C0C	unsigned short	
+[207]	2292	0x20000C0E	unsigned short	
+
+[208]	3063	0x20000C10	unsigned short	
+[209]	3133	0x20000C12	unsigned short	
+[210]	3214	0x20000C14	unsigned short	
+[211]	2879	0x20000C16	unsigned short	
+
+[212]	3891	0x20000C18	unsigned short	
+[213]	4013	0x20000C1A	unsigned short	
+[214]	4065	0x20000C1C	unsigned short	
+[215]	3726	0x20000C1E	unsigned short	
+
+[216]	4688	0x20000C20	unsigned short	
+[217]	4796	0x20000C22	unsigned short	
+[218]	4769	0x20000C24	unsigned short	
+[219]	4564	0x20000C26	unsigned short	
+
+[220]	5130	0x20000C28	unsigned short	
+[221]	5243	0x20000C2A	unsigned short	
+[222]	5096	0x20000C2C	unsigned short	
+[223]	5119	0x20000C2E	unsigned short	
+
+[224]	4477	0x20000C30	unsigned short	
+[225]	4635	0x20000C32	unsigned short	
+[226]	4380	0x20000C34	unsigned short	
+[227]	4640	0x20000C36	unsigned short	
+
+[228]	3286	0x20000C38	unsigned short	
+[229]	3476	0x20000C3A	unsigned short	
+[230]	3209	0x20000C3C	unsigned short	
+[231]	3505	0x20000C3E	unsigned short	
+
+[232]	2419	0x20000C40	unsigned short	
+[233]	2597	0x20000C42	unsigned short	
+[234]	2378	0x20000C44	unsigned short	
+[235]	2624	0x20000C46	unsigned short	
+
+[236]	1952	0x20000C48	unsigned short	
+[237]	2076	0x20000C4A	unsigned short	
+[238]	1933	0x20000C4C	unsigned short	
+[239]	2076	0x20000C4E	unsigned short	
+
+[240]	1528	0x20000C50	unsigned short	
+[241]	1629	0x20000C52	unsigned short	
+[242]	1543	0x20000C54	unsigned short	
+[243]	1627	0x20000C56	unsigned short	
+
+
+[244]	1273	0x20000C58	unsigned short	
+
+
+
+
+
+
+
+
+
+[245]	1288	0x20000C5A	unsigned short	
+[246]	1284	0x20000C5C	unsigned short	
+[247]	1284	0x20000C5E	unsigned short	
+[248]	1260	0x20000C60	unsigned short	
+[249]	1253	0x20000C62	unsigned short	
+[250]	1256	0x20000C64	unsigned short	
+[251]	1248	0x20000C66	unsigned short	
+[252]	1231	0x20000C68	unsigned short	
+[253]	1232	0x20000C6A	unsigned short	
+[254]	1245	0x20000C6C	unsigned short	
+[255]	1232	0x20000C6E	unsigned short	
+[256]	1296	0x20000C70	unsigned short	
+[257]	1291	0x20000C72	unsigned short	
+[258]	1292	0x20000C74	unsigned short	
+[259]	1280	0x20000C76	unsigned short	
+[260]	1245	0x20000C78	unsigned short	
+[261]	1238	0x20000C7A	unsigned short	
+[262]	1235	0x20000C7C	unsigned short	
+[263]	1242	0x20000C7E	unsigned short	
+[264]	1275	0x20000C80	unsigned short	
+[265]	1271	0x20000C82	unsigned short	
+[266]	1261	0x20000C84	unsigned short	
+[267]	1270	0x20000C86	unsigned short	
+[268]	1364	0x20000C88	unsigned short	
+[269]	1362	0x20000C8A	unsigned short	
+[270]	1338	0x20000C8C	unsigned short	
+[271]	1366	0x20000C8E	unsigned short	
+[272]	1271	0x20000C90	unsigned short	
+[273]	1268	0x20000C92	unsigned short	
+[274]	1264	0x20000C94	unsigned short	
+[275]	1252	0x20000C96	unsigned short	
+[276]	1320	0x20000C98	unsigned short	
+[277]	1331	0x20000C9A	unsigned short	
+[278]	1322	0x20000C9C	unsigned short	
+[279]	1319	0x20000C9E	unsigned short	
+[280]	1299	0x20000CA0	unsigned short	
+[281]	1298	0x20000CA2	unsigned short	
+[282]	1308	0x20000CA4	unsigned short	
+[283]	1305	0x20000CA6	unsigned short	
+[284]	1250	0x20000CA8	unsigned short	
+[285]	1242	0x20000CAA	unsigned short	
+[286]	1252	0x20000CAC	unsigned short	
+[287]	1243	0x20000CAE	unsigned short	
+[288]	1273	0x20000CB0	unsigned short	
+[289]	1284	0x20000CB2	unsigned short	
+[290]	1272	0x20000CB4	unsigned short	
+[291]	1277	0x20000CB6	unsigned short	
+[292]	1262	0x20000CB8	unsigned short	
+[293]	1286	0x20000CBA	unsigned short	
+[294]	1274	0x20000CBC	unsigned short	
+[295]	1266	0x20000CBE	unsigned short	
+[296]	1269	0x20000CC0	unsigned short	
+[297]	1269	0x20000CC2	unsigned short	
+[298]	1265	0x20000CC4	unsigned short	
+[299]	1270	0x20000CC6	unsigned short	
+[300]	1234	0x20000CC8	unsigned short	
+[301]	1248	0x20000CCA	unsigned short	
+[302]	1243	0x20000CCC	unsigned short	
+[303]	1254	0x20000CCE	unsigned short	
+[304]	1330	0x20000CD0	unsigned short	
+[305]	1326	0x20000CD2	unsigned short	
+[306]	1311	0x20000CD4	unsigned short	
+[307]	1310	0x20000CD6	unsigned short	
+[308]	1221	0x20000CD8	unsigned short	
+[309]	1230	0x20000CDA	unsigned short	
+[310]	1231	0x20000CDC	unsigned short	
+[311]	1236	0x20000CDE	unsigned short	
+[312]	1350	0x20000CE0	unsigned short	
+[313]	1345	0x20000CE2	unsigned short	
+[314]	1340	0x20000CE4	unsigned short	
+[315]	1350	0x20000CE6	unsigned short	
+[316]	1329	0x20000CE8	unsigned short	
+[317]	1328	0x20000CEA	unsigned short	
+[318]	1335	0x20000CEC	unsigned short	
+[319]	1336	0x20000CEE	unsigned short	
+[320]	1234	0x20000CF0	unsigned short	
+[321]	1237	0x20000CF2	unsigned short	
+[322]	1236	0x20000CF4	unsigned short	
+[323]	1232	0x20000CF6	unsigned short	
+[324]	1229	0x20000CF8	unsigned short	
+[325]	1237	0x20000CFA	unsigned short	
+[326]	1230	0x20000CFC	unsigned short	
+[327]	1241	0x20000CFE	unsigned short	
+[328]	1189	0x20000D00	unsigned short	
+[329]	1210	0x20000D02	unsigned short	
+[330]	1196	0x20000D04	unsigned short	
+[331]	1192	0x20000D06	unsigned short	
+[332]	1255	0x20000D08	unsigned short	
+[333]	1259	0x20000D0A	unsigned short	
+[334]	1245	0x20000D0C	unsigned short	
+[335]	1247	0x20000D0E	unsigned short	
+[336]	1275	0x20000D10	unsigned short	
+[337]	1264	0x20000D12	unsigned short	
+[338]	1250	0x20000D14	unsigned short	
+[339]	1263	0x20000D16	unsigned short	
+[340]	1287	0x20000D18	unsigned short	
+[341]	1275	0x20000D1A	unsigned short	
+[342]	1271	0x20000D1C	unsigned short	
+[343]	1280	0x20000D1E	unsigned short	
+[344]	1266	0x20000D20	unsigned short	
+[345]	1281	0x20000D22	unsigned short	
+[346]	1258	0x20000D24	unsigned short	
+[347]	1258	0x20000D26	unsigned short	
+[348]	1281	0x20000D28	unsigned short	
+[349]	1288	0x20000D2A	unsigned short	
+[350]	1264	0x20000D2C	unsigned short	
+[351]	1256	0x20000D2E	unsigned short	
+[352]	1212	0x20000D30	unsigned short	
+[353]	1225	0x20000D32	unsigned short	
+[354]	1221	0x20000D34	unsigned short	
+[355]	1216	0x20000D36	unsigned short	
+[356]	1314	0x20000D38	unsigned short	
+[357]	1311	0x20000D3A	unsigned short	
+[358]	1282	0x20000D3C	unsigned short	
+[359]	1298	0x20000D3E	unsigned short	
+[360]	1180	0x20000D40	unsigned short	
+[361]	1180	0x20000D42	unsigned short	
+[362]	1195	0x20000D44	unsigned short	
+[363]	1188	0x20000D46	unsigned short	
+[364]	1265	0x20000D48	unsigned short	
+[365]	1260	0x20000D4A	unsigned short	
+[366]	1245	0x20000D4C	unsigned short	
+[367]	1240	0x20000D4E	unsigned short	
+[368]	1275	0x20000D50	unsigned short	
+[369]	1275	0x20000D52	unsigned short	
+[370]	1282	0x20000D54	unsigned short	
+[371]	1278	0x20000D56	unsigned short	
+[372]	1319	0x20000D58	unsigned short	
+[373]	1318	0x20000D5A	unsigned short	
+[374]	1322	0x20000D5C	unsigned short	
+[375]	1322	0x20000D5E	unsigned short	
+[376]	1225	0x20000D60	unsigned short	
+[377]	1241	0x20000D62	unsigned short	
+[378]	1258	0x20000D64	unsigned short	
+[379]	1236	0x20000D66	unsigned short	
+[380]	1291	0x20000D68	unsigned short	
+[381]	1295	0x20000D6A	unsigned short	
+[382]	1284	0x20000D6C	unsigned short	
+[383]	1274	0x20000D6E	unsigned short	
+[384]	1282	0x20000D70	unsigned short	
+[385]	1291	0x20000D72	unsigned short	
+[386]	1293	0x20000D74	unsigned short	
+[387]	1298	0x20000D76	unsigned short	
+[388]	1308	0x20000D78	unsigned short	
+[389]	1308	0x20000D7A	unsigned short	
+[390]	1305	0x20000D7C	unsigned short	
+[391]	1299	0x20000D7E	unsigned short	
+[392]	1259	0x20000D80	unsigned short	
+[393]	1269	0x20000D82	unsigned short	
+[394]	1262	0x20000D84	unsigned short	
+[395]	1271	0x20000D86	unsigned short	
+[396]	1275	0x20000D88	unsigned short	
+[397]	1272	0x20000D8A	unsigned short	
+[398]	1262	0x20000D8C	unsigned short	
+[399]	1278	0x20000D8E	unsigned short	
+[400]	1269	0x20000D90	unsigned short	
+[401]	1294	0x20000D92	unsigned short	
+[402]	1270	0x20000D94	unsigned short	
+[403]	1271	0x20000D96	unsigned short	
+[404]	1240	0x20000D98	unsigned short	
+[405]	1256	0x20000D9A	unsigned short	
+[406]	1247	0x20000D9C	unsigned short	
+[407]	1256	0x20000D9E	unsigned short	
+[408]	1206	0x20000DA0	unsigned short	
+[409]	1215	0x20000DA2	unsigned short	
+[410]	1218	0x20000DA4	unsigned short	
+[411]	1213	0x20000DA6	unsigned short	
+[412]	1251	0x20000DA8	unsigned short	
+[413]	1250	0x20000DAA	unsigned short	
+[414]	1231	0x20000DAC	unsigned short	
+[415]	1237	0x20000DAE	unsigned short	
+[416]	1304	0x20000DB0	unsigned short	
+[417]	1289	0x20000DB2	unsigned short	
+[418]	1297	0x20000DB4	unsigned short	
+[419]	1301	0x20000DB6	unsigned short	
+[420]	1350	0x20000DB8	unsigned short	
+[421]	1340	0x20000DBA	unsigned short	
+[422]	1327	0x20000DBC	unsigned short	
+[423]	1327	0x20000DBE	unsigned short	
+[424]	1261	0x20000DC0	unsigned short	
+[425]	1258	0x20000DC2	unsigned short	
+[426]	1271	0x20000DC4	unsigned short	
+[427]	1266	0x20000DC6	unsigned short	
+[428]	1175	0x20000DC8	unsigned short	
+[429]	1188	0x20000DCA	unsigned short	
+[430]	1201	0x20000DCC	unsigned short	
+[431]	1194	0x20000DCE	unsigned short	
+[432]	1266	0x20000DD0	unsigned short	
+[433]	1287	0x20000DD2	unsigned short	
+[434]	1272	0x20000DD4	unsigned short	
+[435]	1264	0x20000DD6	unsigned short	
+[436]	1240	0x20000DD8	unsigned short	
+[437]	1235	0x20000DDA	unsigned short	
+[438]	1232	0x20000DDC	unsigned short	
+[439]	1244	0x20000DDE	unsigned short	
+[440]	1352	0x20000DE0	unsigned short	
+[441]	1343	0x20000DE2	unsigned short	
+[442]	1343	0x20000DE4	unsigned short	
+[443]	1334	0x20000DE6	unsigned short	
+[444]	1251	0x20000DE8	unsigned short	
+[445]	1241	0x20000DEA	unsigned short	
+[446]	1231	0x20000DEC	unsigned short	
+[447]	1243	0x20000DEE	unsigned short	
+[448]	1270	0x20000DF0	unsigned short	
+[449]	1264	0x20000DF2	unsigned short	
+[450]	1252	0x20000DF4	unsigned short	
+[451]	1273	0x20000DF6	unsigned short	
+[452]	1272	0x20000DF8	unsigned short	
+[453]	1276	0x20000DFA	unsigned short	
+[454]	1262	0x20000DFC	unsigned short	
+[455]	1272	0x20000DFE	unsigned short	
+[456]	1263	0x20000E00	unsigned short	
+[457]	1287	0x20000E02	unsigned short	
+[458]	1270	0x20000E04	unsigned short	
+[459]	1271	0x20000E06	unsigned short	
+[460]	1283	0x20000E08	unsigned short	
+[461]	1295	0x20000E0A	unsigned short	
+[462]	1307	0x20000E0C	unsigned short	
+[463]	1291	0x20000E0E	unsigned short	
+[464]	1216	0x20000E10	unsigned short	
+[465]	1222	0x20000E12	unsigned short	
+[466]	1224	0x20000E14	unsigned short	
+[467]	1226	0x20000E16	unsigned short	
+[468]	1309	0x20000E18	unsigned short	
+[469]	1314	0x20000E1A	unsigned short	
+[470]	1306	0x20000E1C	unsigned short	
+[471]	1309	0x20000E1E	unsigned short	
+[472]	1286	0x20000E20	unsigned short	
+[473]	1287	0x20000E22	unsigned short	
+[474]	1283	0x20000E24	unsigned short	
+[475]	1291	0x20000E26	unsigned short	
+[476]	1303	0x20000E28	unsigned short	
+[477]	1306	0x20000E2A	unsigned short	
+[478]	1297	0x20000E2C	unsigned short	
+[479]	1304	0x20000E2E	unsigned short	
+[480]	1275	0x20000E30	unsigned short	
+[481]	1292	0x20000E32	unsigned short	
+[482]	1278	0x20000E34	unsigned short	
+[483]	1276	0x20000E36	unsigned short	
+[484]	1229	0x20000E38	unsigned short	
+[485]	1225	0x20000E3A	unsigned short	
+[486]	1242	0x20000E3C	unsigned short	
+[487]	1242	0x20000E3E	unsigned short	
+[488]	1206	0x20000E40	unsigned short	
+[489]	1219	0x20000E42	unsigned short	
+[490]	1220	0x20000E44	unsigned short	
+[491]	1220	0x20000E46	unsigned short	
+[492]	1281	0x20000E48	unsigned short	
+[493]	1294	0x20000E4A	unsigned short	
+[494]	1291	0x20000E4C	unsigned short	
+[495]	1289	0x20000E4E	unsigned short	
+[496]	1230	0x20000E50	unsigned short	
+[497]	1237	0x20000E52	unsigned short	
+[498]	1252	0x20000E54	unsigned short	
+[499]	1253	0x20000E56	unsigned short	
+[500]	1274	0x20000E58	unsigned short	
+[501]	1283	0x20000E5A	unsigned short	
+[502]	1271	0x20000E5C	unsigned short	
+[503]	1280	0x20000E5E	unsigned short	
+[504]	1240	0x20000E60	unsigned short	
+[505]	1240	0x20000E62	unsigned short	
+[506]	1225	0x20000E64	unsigned short	
+[507]	1239	0x20000E66	unsigned short	
+[508]	1206	0x20000E68	unsigned short	
+[509]	1209	0x20000E6A	unsigned short	
+[510]	1201	0x20000E6C	unsigned short	
+[511]	1200	0x20000E6E	unsigned short	
+led_display_ye_ok	0x55	0x200018A2	unsigned char	
+led_display_long	60	0x200018A4	unsigned char	
+Gesture_Process_Result	4	0x20000664	unsigned long	
+led_display_Vbuffx	0x01	0x2000189D	unsigned char	
+led_display_pageing	'U' (0x55)	0x2000189E	unsigned char	
+led_display_y	0x10	0x20001893	unsigned char	
+led_display_txpic_flag	0x00	0x20001898	unsigned char	
+led_display_new	0xAA	0x20001896	unsigned char	
+UART1_transmit_control	0x00	0x200018C3	unsigned char	
+ps_flag_led	0	0x200018A5	unsigned char	
+Gesture_Process_Result	4	0x20000664	unsigned long	
+rx2_cnt	0x00	0x2000188B	unsigned char	
+uart2_rx_buff	""	0x20001348	unsigned char[100]	
+STM32_UP_selfT_flag1	0x00	0x200018BD	unsigned char	

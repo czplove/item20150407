@@ -1,0 +1,208 @@
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[DebugChecksum]
+Checksum=-18048851
+[JLinkDriver]
+CStepIntDis=_ 0
+[CodeCoverage]
+Enabled=_ 0
+[Exceptions]
+StopOnUncaught=_ 0
+StopOnThrow=_ 0
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[Interrupts]
+Enabled=1
+[MemConfig]
+Base=1
+Manual=0
+Ddf=1
+TypeViol=0
+Stop=1
+[Simulator]
+Freq=10000000
+MultiCoreRunAll=1
+[SWOTraceHWSettings]
+OverrideDefaultClocks=0
+CpuClock=72000000
+ClockAutoDetect=0
+ClockWanted=2000000
+JtagSpeed=2000000
+Prescaler=36
+TimeStampPrescIndex=0
+TimeStampPrescData=0
+PcSampCYCTAP=1
+PcSampPOSTCNT=15
+PcSampIndex=0
+DataLogMode=0
+ITMportsEnable=0
+ITMportsTermIO=0
+ITMportsLogFile=0
+ITMlogFile=$PROJ_DIR$\ITM.log
+[array_types]
+Fmt0=char[30]	4	0
+Fmt1=unsigned char[100]	4	0
+Fmt2=unsigned char[10]	4	0
+Fmt3=unsigned char[30]	4	0
+Fmt4=unsigned char[384]	4	0
+Fmt5=unsigned char[4]	4	0
+Fmt6=unsigned char[50]	3	0
+Fmt7=unsigned char[512]	4	0
+Fmt8=unsigned char[6]	3	0
+Fmt9=unsigned long[16]	4	0
+Fmt10=unsigned long[24]	4	0
+Fmt11=unsigned long[26]	4	0
+Fmt12=unsigned long[32]	4	0
+Fmt13=unsigned short[50]	3	0
+[watch_formats]
+Fmt0={W}1:CSKEY_DATA	4	0
+Fmt1={W}1:cfgdata	4	0
+Fmt2={W}1:hang_num	1	0
+Fmt3={W}1:humidity_data	3	0
+Fmt4={W}1:i	4	0
+Fmt5={W}1:i2c1_bus_error_cn	3	0
+Fmt6={W}1:i2c1_newdata_flag	4	0
+Fmt7={W}1:i2c1_psdata_8	4	0
+Fmt8={W}1:i2c1_psint_flag_FX	4	0
+Fmt9={W}1:i2c2_psdata_8	4	0
+Fmt10={W}1:i2c2_psint_flag_FX	4	0
+Fmt11={W}1:led_display_Hx	4	0
+Fmt12={W}1:led_display_page	4	0
+Fmt13={W}1:led_display_y	3	0
+Fmt14={W}1:ps_flag	4	0
+Fmt15={W}1:rgb_num	3	0
+Fmt16={W}1:status	4	0
+Fmt17={W}1:sys_err_flag	4	0
+Fmt18={W}1:temp_data	4	0
+Fmt19={W}1:temp_data01_8	4	0
+Fmt20={W}1:temp_data02_8	4	0
+Fmt21={W}1:temp_data03_8	4	0
+Fmt22={W}1:temp_data04_8	4	0
+Fmt23={W}1:temp_data8	3	0
+Fmt24={W}1:temperature_data	3	0
+Fmt25={W}1:watch_cfgdata	4	0
+Fmt26={W}1:watch_cfgdata_16	4	0
+Fmt27={W}1:wei1	3	0
+Fmt28={W}1:wei2	3	0
+Fmt29={W}1:wei3	3	0
+Fmt30={W}42:ADI_CH1_OFFSET	4	0
+Fmt31={W}42:ADI_CH2_OFFSET	4	0
+Fmt32={W}42:ADI_CH3_OFFSET	4	0
+Fmt33={W}42:ADI_CH4_OFFSET	4	0
+Fmt34={W}42:ADI_DEC_MODE	4	0
+Fmt35={W}42:ADI_INT_STATUS	4	0
+Fmt36={W}42:ADXL_DUR	4	0
+Fmt37={W}42:ADXL_TAP_it_SOURCE	4	0
+Fmt38={W}42:ADXL_TAP_it_flag	4	0
+Fmt39={W}42:ADXL_THRESH_TAP	4	0
+Fmt40={W}42:EEP_Data	4	0
+Fmt41={W}42:HL_flag	4	0
+Fmt42={W}42:HL_step	4	0
+Fmt43={W}42:STM32_UP_selfT_flag1	4	0
+Fmt44={W}42:UART1_transmit_control	4	0
+Fmt45={W}42:Weather_flag	4	0
+Fmt46={W}42:X_value	0	3
+Fmt47={W}42:Y_value	0	3
+Fmt48={W}42:Z_value	0	3
+Fmt49={W}42:cticks_s_page	3	0
+Fmt50={W}42:i2c1_psdata_8	3	0
+Fmt51={W}42:i2c2_psdata_8	3	0
+Fmt52={W}42:led_display_Hx	4	0
+Fmt53={W}42:led_display_Vbuffx	4	0
+Fmt54={W}42:led_display_cn	3	0
+Fmt55={W}42:led_display_data_flag	4	0
+Fmt56={W}42:led_display_flag	4	0
+Fmt57={W}42:led_display_long	3	0
+Fmt58={W}42:led_display_move_pt	4	0
+Fmt59={W}42:led_display_new	4	0
+Fmt60={W}42:led_display_num	4	0
+Fmt61={W}42:led_display_page	4	0
+Fmt62={W}42:led_display_start	4	0
+Fmt63={W}42:led_display_txpic_flag	4	0
+Fmt64={W}42:led_display_y	4	0
+Fmt65={W}42:led_display_ye_ok	4	0
+Fmt66={W}42:ps_flag_led	3	0
+Fmt67={W}42:ps_flag_led_end	4	0
+Fmt68={W}42:regdata	4	0
+Fmt69={W}42:rgb_num	4	0
+Fmt70={W}42:rx2_cnt	4	0
+[SWOTraceWindow]
+PcSampling=0
+InterruptLogs=0
+ForcedTimeStamps=0
+EventCPI=0
+EventEXC=0
+EventFOLD=0
+EventLSU=0
+EventSLEEP=0
+[PowerLog]
+LogEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=0
+Title_0=I0
+Symbol_0=0 4 1
+LiveEnabled=0
+LiveFile=PowerLogLive.log
+[DataLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+[EventLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+SumSortOrder=0
+[InterruptLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+SumSortOrder=0
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[CallStackLog]
+Enabled=0
+[PowerProbe]
+Frequency=10000
+Probe0=I0
+ProbeSetup0=2 1 1 2 0 0
+[DriverProfiling]
+Enabled=0
+Mode=3
+Graph=0
+Symbiont=0
+Exclusions=
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Count=0
+[Aliases]
+A0=_ "C:\Gesture_3D_Project\ADUX1020\Driver\calibration\channelCalibration.c" ""
+A1=_ "F:\zhao\item20150407\Release\STM32F103xV2.0_iap\DreamFlows\main.c" ""
+A2=_ "F:\zhao\item20150407\STM32F103xV0.2 - 副本\DreamFlows\COMUSE.C" ""
+A3=_ "F:\zhao\item20150407\STM32F103xV0.2 - 副本\DreamFlows\co2.c" ""
+A4=_ "F:\zhao\item20150407\STM32F103xV0.2 - 副本\DreamFlows\library\src\stm32f10x_gpio.c" ""
+A5=_ "F:\zhao\item20150407\STM32F103xV0.2 - 副本\DreamFlows\main.c" ""
+Count=6
+SuppressDialog=1
