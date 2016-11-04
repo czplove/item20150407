@@ -403,7 +403,7 @@ extern UINT32    test_SIN_data[16];
 
 //-模拟EEPROM 使用FLASH
 extern UINT32 EEP_Data;
-extern UINT8  EEP_Data_flag;
+
 
 extern float float_data;
 
@@ -456,7 +456,6 @@ extern UINT16 	 VOC_data;
 extern UINT16    VOC_data_old;
 extern UINT16    VOC_renew_wait_time;
 extern UINT16    VOC_data_flag;
-extern UINT16    voc_rd_flag;
 
 
 //-语音ES705全局变量定义
@@ -475,9 +474,6 @@ extern UINT8 		es705_training_flag;  //-说明es705处于哪个状态
 extern UINT16    es705_training_wait_time;
 extern UINT16    es705_msleep_time;
 
-//-iap升级
-extern UINT16    IAP_ack_hang;
-extern UINT16    IAP_ack_version;
 
 
 #endif // __GloblDef_H__

@@ -1273,7 +1273,7 @@ typedef struct
   */
 
 
-#define FLASH_BASE            ((uint32_t)0x08004000) /*!< FLASH base address in the alias region */
+#define FLASH_BASE            ((uint32_t)0x08000000) /*!< FLASH base address in the alias region */
 #define SRAM_BASE             ((uint32_t)0x20000000) /*!< SRAM base address in the alias region */
 #define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
 

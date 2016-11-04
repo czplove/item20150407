@@ -41,12 +41,7 @@
 #define   MOD_KG_send_inquire_state_FRAME 	   	   0x20
 #define   MOD_KG_set_hl_set_FRAME	     	           0x21
 
-#define   MOD_KG_7620_inquire_upSDB_FRAME          0x22
-#define   MOD_KG_7620_inquire_update_FRAME	       0x23
-#define   MOD_KG_7620_inquire_version_FRAME	       0x24
-
 extern void RunLed_stata_judge(void);
-extern void run_in_iap(void);
 extern void RunLed_stata_judge_new(BYTE page,BYTE *data);
 
 //-为协议处理临时定义的变量
@@ -1244,118 +1239,6 @@ void MOD_KG_polling_PM25_ack(void)		//-这里组织应答内容仅仅是为了控制串口发送,不
 }
 
 
-void MOD_KG_7620_inquire_update_ack(void)		//-设置屏保时间
-{
-	  WORD the_ram_ax;
-
-	  //-if(port_report[4] == 0x01)		//-
-	  {
-	  	 //-led_display_long = port_report[5];	//-屏保时间
-	  	 //-cticks_s_page = 0;
-       //-led_display_start = 0x55;
-
-       //-如果数据成功接收到之后就应答一次
-			  port_send[0][0] = 0xaa;		//-两字节包头
-			  port_send[0][1] = 0x55;
-
-			  port_send[0][2] = 6;		//-整包长： 1个字节，从包头开始，到CRC16之前的数据。
-
-			  port_send[0][3] = UART3_TO_UART2_FLAG;		//-功能码:01h 传感器主动上报
-
-			  //-有效数据
-			  //-这里的有效数据又是以块为单位的"数据长度+设备ID+功能码+数据描述+数据位"
-			  port_send[0][4] = 0x02;		//-数据长度
-			  port_send[0][5] = 0x55;
-
-			  //-CRC16
-			  the_ram_ax=MOD_KG_CRC16(&port_send[0][0],port_send[0][2]);
-			  port_send[0][6] =LOBYTE(the_ram_ax);
-			  port_send[0][7] =HIBYTE(the_ram_ax);	//-直到这里所有的报文内容都已经准备好了
-
-			  //-发送长度
-			  port_send_len[0] = port_send[0][2] + 2;
-			  port_deal_flag[0] = 0xaa;
-	  }
-
-}
-
-void MOD_KG_7620_inquire_upSDB_ack(void)		//-设置屏保时间
-{
-	  WORD the_ram_ax;
-
-	  //-if(port_report[4] == 0x01)		//-
-	  {
-	  	 //-led_display_long = port_report[5];	//-屏保时间
-	  	 //-cticks_s_page = 0;
-       //-led_display_start = 0x55;
-
-       //-如果数据成功接收到之后就应答一次
-			  port_send[0][0] = 0xaa;		//-两字节包头
-			  port_send[0][1] = 0x55;
-
-			  port_send[0][2] = 6;		//-整包长： 1个字节，从包头开始，到CRC16之前的数据。
-
-			  port_send[0][3] = UART3_TO_UART2_FLAG;		//-功能码:01h 传感器主动上报
-
-			  //-有效数据
-			  //-这里的有效数据又是以块为单位的"数据长度+设备ID+功能码+数据描述+数据位"
-			  port_send[0][4] = HIBYTE(IAP_ack_hang);		//-数据长度
-			  port_send[0][5] = LOBYTE(IAP_ack_hang);
-
-			  //-CRC16
-			  the_ram_ax=MOD_KG_CRC16(&port_send[0][0],port_send[0][2]);
-			  port_send[0][6] =LOBYTE(the_ram_ax);
-			  port_send[0][7] =HIBYTE(the_ram_ax);	//-直到这里所有的报文内容都已经准备好了
-
-			  //-发送长度
-			  port_send_len[0] = port_send[0][2] + 2;
-			  port_deal_flag[0] = 0xaa;
-
-        IAP_ack_hang = 0;
-	  }
-
-}
-
-
-void MOD_KG_7620_inquire_version_ack(void)		//-设置屏保时间
-{
-	  WORD the_ram_ax;
-
-	  //-if(port_report[4] == 0x01)		//-
-	  {
-	  	 //-led_display_long = port_report[5];	//-屏保时间
-	  	 //-cticks_s_page = 0;
-       //-led_display_start = 0x55;
-
-       //-如果数据成功接收到之后就应答一次
-			  port_send[0][0] = 0xaa;		//-两字节包头
-			  port_send[0][1] = 0x55;
-
-			  port_send[0][2] = 8;		//-整包长： 1个字节，从包头开始，到CRC16之前的数据。
-
-			  port_send[0][3] = UART3_TO_UART2_FLAG;		//-功能码:01h 传感器主动上报
-
-			  //-有效数据
-			  //-这里的有效数据又是以块为单位的"数据长度+设备ID+功能码+数据描述+数据位"
-			  port_send[0][4] = HIBYTE(STM32_SYS_VERSION_NUM);		//-数据长度
-			  port_send[0][5] = LOBYTE(STM32_SYS_VERSION_NUM);
-
-        port_send[0][6] = HIBYTE(IAP_ack_version);		//-数据长度
-			  port_send[0][7] = LOBYTE(IAP_ack_version);
-
-			  //-CRC16
-			  the_ram_ax=MOD_KG_CRC16(&port_send[0][0],port_send[0][2]);
-			  port_send[0][8] =LOBYTE(the_ram_ax);
-			  port_send[0][9] =HIBYTE(the_ram_ax);	//-直到这里所有的报文内容都已经准备好了
-
-			  //-发送长度
-			  port_send_len[0] = port_send[0][2] + 2;
-			  port_deal_flag[0] = 0xaa;
-	  }
-
-}
-
-
 
 void MOD_KG_receive_set_deal(void)		//-用户设置灯的颜色,目前支持设置四种颜色
 {
@@ -1975,73 +1858,9 @@ void MOD_KG_set_hl_set_deal(void)		//-把接收到的数据进行透明传输
 }
 
 
-void MOD_KG_inquire_update_deal(void)		//-把接收到的数据进行透明传输
-{
-	  WORD i,the_ram_ax;
-
-    if((port_report[4] == 1) && (port_report[5] == 0x55))
-    {//-主板接收到升级命令
-        run_in_iap();   //-退出正常程序,进入IAP程序
-
-        //-如果数据成功接收到之后就应答一次
-			  port_send[0][0] = 0xaa;		//-两字节包头
-			  port_send[0][1] = 0x55;
-
-			  port_send[0][2] = 6;		//-整包长： 1个字节，从包头开始，到CRC16之前的数据。
-
-			  port_send[0][3] = port_report[3] | 0x80;		//-功能码:01h 传感器主动上报
-
-			  //-有效数据
-			  //-这里的有效数据又是以块为单位的"数据长度+设备ID+功能码+数据描述+数据位"
-			  port_send[0][4] = 0x01;		//-数据长度
-			  port_send[0][5] = 0x55;
-
-			  //-CRC16
-			  the_ram_ax=MOD_KG_CRC16(&port_send[0][0],port_send[0][2]);
-			  port_send[0][6] =LOBYTE(the_ram_ax);
-			  port_send[0][7] =HIBYTE(the_ram_ax);	//-直到这里所有的报文内容都已经准备好了
-
-			  //-发送长度
-			  port_send_len[0] = port_send[0][2] + 2;
-			  port_deal_flag[0] = 0xaa;
-
-        while(1);   //-等待复位重启,进入IAP程序
-    }
-    else
-    {//-不是主板就传递给射灯板
-        for(i=0;i<(port_report[2] + 2);i++)
-        {
-          port_send[1][port_send_pt[1]] = port_report[i];
-          port_send_pt[1] = (port_send_pt[1] + 1) & 0x1ff;
-        }
-    }
-}
 
 
-void MOD_KG_inquire_upSDB_deal(void)		//-把接收到的数据进行透明传输
-{
-	  WORD i;
 
-
-    for(i=0;i<(port_report[2] + 2);i++)
-	  {
-	  	port_send[1][port_send_pt[1]] = port_report[i];
-	  	port_send_pt[1] = (port_send_pt[1] + 1) & 0x1ff;
-	  }
-}
-
-
-void MOD_KG_inquire_version_deal(void)		//-把接收到的数据进行透明传输
-{
-	  WORD i;
-
-
-    for(i=0;i<(port_report[2] + 2);i++)
-	  {
-	  	port_send[1][port_send_pt[1]] = port_report[i];
-	  	port_send_pt[1] = (port_send_pt[1] + 1) & 0x1ff;
-	  }
-}
 
 
 //-下面处理通讯接收到的内容,其实就是一个单独的上层协议的处理,在主函数里面周期调用
@@ -2417,32 +2236,7 @@ rec_ok_deal:
 																															      }
 																															      else
 																															      {
-                                                                      if(port_report[3] == 0x23)
-                                                                      {
-                                                                         MOD_KG_rec_frame_type = MOD_KG_7620_inquire_update_FRAME;
-                                                                         MOD_KG_inquire_update_deal();
-                                                                         MOD_KG_transmit_wait_time=cticks_ms;
-                                                                      }
-                                                                      else
-                                                                      {
-                                                                        if(port_report[3] == 0x22)
-                                                                        {
-                                                                           MOD_KG_rec_frame_type = MOD_KG_7620_inquire_upSDB_FRAME;
-                                                                           MOD_KG_inquire_upSDB_deal();
-                                                                           MOD_KG_transmit_wait_time=cticks_ms;
-                                                                        }
-                                                                        else
-                                                                        {
-                                                                          if(port_report[3] == 0x24)
-                                                                          {
-                                                                             MOD_KG_rec_frame_type = MOD_KG_7620_inquire_version_FRAME;
-                                                                             MOD_KG_inquire_version_deal();
-                                                                             MOD_KG_transmit_wait_time=cticks_ms;
-                                                                          }
-                                                                          else
-                                                                            MOD_KG_rec_frame_type = 255;
-                                                                        }
-                                                                      }
+																															      	MOD_KG_rec_frame_type = 255;
 																															      }
 																													      }
 																												      }
@@ -2514,14 +2308,13 @@ inrda:
 	                     //-MOD_KG_rec_frame_type=MOD_KG_YX_FRAME;	//-表示需要接收的帧的类型是这个值,接收到这样的值才是正确的
 	                     //-MOD_KG_wait_replay=YES;
 	                     //-MOD_KG_polling_ID_cmd();	//-本规约定义的内容是,问答型的,这个端口上的所有装置都是接收查询
-	                     if((Judge_Time_In_MainLoop(MOD_KG_transmit_wait_time,1000)==YES) && (UART1_sloop_flag == 0))	//-周期上送的优先级最低,只有空闲时周期上送,一但有任何数据都退出总线
+	                     if((Judge_Time_In_MainLoop(MOD_KG_transmit_wait_time,1900)==YES) && (UART1_sloop_flag == 0))	//-周期上送的优先级最低,只有空闲时周期上送,一但有任何数据都退出总线
 	                     {
 	                     		MOD_KG_send_sense_data();  //-测试隐掉
 	                     		Device_communication_cn++;
 	                     		if(Device_communication_cn > 60)
 	                     		{//-超过30次都没有应答认为和上面通讯终止了,需要处理些特殊情况
 	                     			HRL_RUN_flag = 0;
-                            led_display_start = 0;  //-上面的通讯断了,就认为屏幕熄灭了
 	                     		}
 	                     		//-port_send_sense_data[0] = 0;
 	                     		//-MOD_KG_now_poll_addr++;	//-从机地址
@@ -2702,33 +2495,6 @@ inrda:
 																				                            MOD_KG_transmit_flag=NO;
 																				                            MOD_KG_transmit_wait_time=cticks_ms;
 																				                         }
-                                                                 else
-                                                                 {
-                                                                     if(UART3_TO_UART2_FLAG == 0xA3)	//-这些标志位都是在串口3中置位的,内容本串口自己组织向7620发送
-                                                                     {
-                                                                        MOD_KG_7620_inquire_update_ack();
-                                                                        MOD_KG_transmit_flag=NO;
-                                                                        MOD_KG_transmit_wait_time=cticks_ms;
-                                                                     }
-                                                                     else
-                                                                     {
-                                                                         if(UART3_TO_UART2_FLAG == 0xA2)	//-这些标志位都是在串口3中置位的,内容本串口自己组织向7620发送
-                                                                         {
-                                                                            MOD_KG_7620_inquire_upSDB_ack();
-                                                                            MOD_KG_transmit_flag=NO;
-                                                                            MOD_KG_transmit_wait_time=cticks_ms;
-                                                                         }
-                                                                         else
-                                                                         {
-                                                                             if(UART3_TO_UART2_FLAG == 0xA4)	//-这些标志位都是在串口3中置位的,内容本串口自己组织向7620发送
-                                                                             {
-                                                                                MOD_KG_7620_inquire_version_ack();
-                                                                                MOD_KG_transmit_flag=NO;
-                                                                                MOD_KG_transmit_wait_time=cticks_ms;
-                                                                             }
-                                                                         }
-                                                                     }
-                                                                 }
 																			                         }
 																		                         }
 																	                         }

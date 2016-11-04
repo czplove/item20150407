@@ -40,10 +40,6 @@ STM32传出的数据,直接在串口3中处理,不传递任何数据,仅仅置标志位让串口2自己组织数据
 
 #define   MOD_KG_set_hl_set_FRAME	     	           0x21
 
-#define   MOD_KG_7620_inquire_upSDB_FRAME          0x22
-#define   MOD_KG_7620_inquire_update_FRAME	       0x23
-#define   MOD_KG_7620_inquire_version_FRAME	       0x24
-
 
 
 #define   MOD_KG_control_HRL_FRAME		  	    	   0x40
@@ -609,27 +605,6 @@ void MOD_TC_set_hl_set_deal(void)		//-接收到应答之后就不再,发送命令
     UART3_TO_UART2_FLAG = port_report[3] | 0x80;
 }
 
-void MOD_TC_7620_inquire_update_deal(void)		//-接收到应答之后就不再,发送命令
-{
-	  //-WORD the_ram_ax;
-
-    UART3_TO_UART2_FLAG = port_report[3] | 0x80;
-}
-
-void MOD_TC_7620_inquire_upSDB_deal(void)		//-接收到应答之后就不再,发送命令
-{
-	  //-WORD the_ram_ax;
-    IAP_ack_hang = (port_report[4] << 8) + port_report[5];
-    UART3_TO_UART2_FLAG = port_report[3] | 0x80;
-}
-
-
-void MOD_TC_7620_inquire_version_deal(void)		//-接收到应答之后就不再,发送命令
-{
-	  //-WORD the_ram_ax;
-    IAP_ack_version = (port_report[4] << 8) + port_report[5];
-    UART3_TO_UART2_FLAG = port_report[3] | 0x80;
-}
 
 
 
@@ -953,31 +928,7 @@ rec_ok_deal:
 																														      	 			 while(1);
 																														      	 }
 																														      	 else
-                                                                     {
-                                                                         if(port_report[3] == 0xA3)	//-
-                                                                         {
-                                                                            MOD_TC_rec_frame_type = MOD_KG_7620_inquire_update_FRAME;
-                                                                            MOD_TC_7620_inquire_update_deal();
-                                                                         }
-                                                                         else
-                                                                         {
-                                                                           if(port_report[3] == 0xA2)	//-
-                                                                           {
-                                                                              MOD_TC_rec_frame_type = MOD_KG_7620_inquire_upSDB_FRAME;
-                                                                              MOD_TC_7620_inquire_upSDB_deal();
-                                                                           }
-                                                                           else
-                                                                           {
-                                                                             if(port_report[3] == 0xA4)	//-
-                                                                             {
-                                                                                MOD_TC_rec_frame_type = MOD_KG_7620_inquire_version_FRAME;
-                                                                                MOD_TC_7620_inquire_version_deal();
-                                                                             }
-                                                                             else
-                                                                                MOD_TC_rec_frame_type = 255;
-                                                                           }
-                                                                         }
-                                                                     }
+      																															 		MOD_TC_rec_frame_type = 255;
 																														      }
 																													      }
 																												      }
@@ -1004,7 +955,7 @@ rec_ok_deal:
 	      			}
 	      	}
 	      }
-      }
+			}
 
 ////////////////////////////////////////////////////////////////////////////////
 

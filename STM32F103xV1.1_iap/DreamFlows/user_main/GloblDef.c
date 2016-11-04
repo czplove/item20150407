@@ -359,7 +359,6 @@ UINT32    test_SIN_data[16];
 
 //-模拟EEPROM 使用FLASH
 UINT32 EEP_Data;
-UINT8  EEP_Data_flag;		//-0x55说明数据有修改,需要写入FLASH
 
 
 
@@ -417,7 +416,6 @@ UINT16 		VOC_data;
 UINT16    VOC_data_old;
 UINT16    VOC_renew_wait_time;
 UINT16    VOC_data_flag;
-UINT16    voc_rd_flag;
 
 
 
@@ -438,6 +436,4 @@ UINT8 		es705_training_flag;  //-说明es705处于哪个状态
 UINT16    es705_training_wait_time;   //-一次命令进入学习状态,最多5Min
 UINT16    es705_msleep_time;
 
-//-iap升级
-UINT16    IAP_ack_hang;
-UINT16    IAP_ack_version;
+
