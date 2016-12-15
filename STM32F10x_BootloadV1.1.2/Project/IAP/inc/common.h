@@ -39,10 +39,10 @@ typedef  void (*pFunction)(void);
 #define ApplicationAddress    0x8004000
 
 #define FLASH_APP0_ADDR		0x08004000  	//第一个应用程序起始地址(存放在FLASH)
-#define FLASH_APP1_ADDR		0x08024000  	//第一个应用程序起始地址(存放在FLASH)
+#define FLASH_APP1_ADDR		0x08020000  	//第一个应用程序起始地址(存放在FLASH)
 
 #define STM32_FLASH_BASE 0x08000000 	//STM32 FLASH的起始地址
-#define STM32_FLASH_SIZE 512 	 		//所选STM32的FLASH容量大小(单位为K)
+#define STM32_FLASH_SIZE 256 	 		//所选STM32的FLASH容量大小(单位为K)
 
 
 
@@ -108,10 +108,10 @@ void FLASH_DisableWriteProtectionPages(void);
 void Main_Menu(void);
 void SerialDownload(void);
 
-#define BANK4_WRITE_START_ADDR  ((UINT32)0x0807E000)
-#define BANK4_WRITE_END_ADDR    ((UINT32)0x0807E7FF)
-#define BANK3_WRITE_START_ADDR  ((UINT32)0x0807E800)
-#define BANK3_WRITE_END_ADDR    ((UINT32)0x0807EFFF)
+#define BANK4_WRITE_START_ADDR  ((UINT32)0x0803E000)
+#define BANK4_WRITE_END_ADDR    ((UINT32)0x0803E7FF)
+#define BANK3_WRITE_START_ADDR  ((UINT32)0x0803E800)
+#define BANK3_WRITE_END_ADDR    ((UINT32)0x0803EFFF)
 
 #define APP_CONFIG_ADDR 		(BANK3_WRITE_START_ADDR + 0x000)	//配置地址,说明运行程序的选择
 #define APP_CONFIG1_ADDR 		(BANK4_WRITE_START_ADDR + 0x000)	//配置地址,说明备份区的内容是否复制OK
